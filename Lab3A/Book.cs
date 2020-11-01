@@ -36,7 +36,26 @@ namespace Lab3A
         /// <returns>Encrypted string</returns>
         public string Encrypt()
         {
-            return null;
+            char[] summary = Summary.ToCharArray();
+
+            for (int i = 0; i < summary.Length; i++)
+            {
+                int number = (int)summary[i];
+
+                if (number >= 'a' && number <= 'z')
+                    if (number > 'm')
+                        number -= 13;
+                    else
+                        number += 13;
+                else if (number >= 'A' && number <= 'Z')
+                    if (number > 'M')
+                        number -= 13;
+                    else
+                        number += 13;
+                summary[i] = (char)number;
+            }
+
+            return new string(summary);
         }
 
         /// <summary>

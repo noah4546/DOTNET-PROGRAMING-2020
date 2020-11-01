@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Week7_Interfaces.CompressedTextFile">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <InheritanceLine Type="Week7_Interfaces.BaseFile" ManuallyRouted="true">
+      <Path>
+        <Point X="2.5" Y="2.055" />
+        <Point X="2.5" Y="2.602" />
+        <Point X="1.25" Y="2.602" />
+        <Point X="1.25" Y="3.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAwAAAABAgAAAAAAKAAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>CompressedTextFile.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Week7_Interfaces.BaseFile">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseFile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Week7_Interfaces.Program">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Week7_Interfaces.WordFile">
+    <Position X="2.75" Y="3.5" Width="1.5" />
+    <InheritanceLine Type="Week7_Interfaces.BaseFile" ManuallyRouted="true">
+      <Path>
+        <Point X="2.5" Y="2.055" />
+        <Point X="2.5" Y="2.611" />
+        <Point X="3.5" Y="2.611" />
+        <Point X="3.5" Y="3.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAQAEAAA=</HashCode>
+      <FileName>WordFile.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="Week7_Interfaces.ICompressible">
+    <Position X="7" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ICompressible.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Week7_Interfaces.IPrintable">
+    <Position X="8.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAEAAA=</HashCode>
+      <FileName>IPrintable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Week7_Interfaces.IStorable">
+    <Position X="5.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>IStorable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

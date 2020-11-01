@@ -112,10 +112,12 @@ namespace Lab3A
                 if (mediaItem.Search(input))
                 {
                     Console.WriteLine(mediaItem);
-                    if (mediaItem.GetType() == typeof(Book))
-                        Console.WriteLine(((Book)mediaItem).Decrypt());
-                    else if (mediaItem.GetType() == typeof(Movie))
-                        Console.WriteLine(((Movie)mediaItem).Decrypt());
+
+                    //If it is a book or movie get decrypted summary
+                    if (mediaItem is Book book)
+                        Console.WriteLine(book.Decrypt());
+                    else if (mediaItem is Movie movie)
+                        Console.WriteLine(movie.Decrypt());
                     Console.WriteLine("--------------------");
                 }
             }   

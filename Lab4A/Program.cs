@@ -26,7 +26,7 @@ namespace Lab4A
         /// <param name="args">args unused</param>
         static void Main(string[] args)
         {
-            List<Employee> employees = LoadEmployees();
+            List<Employee> employees = Read();
 
             if(employees != null)
             {
@@ -37,10 +37,10 @@ namespace Lab4A
         }
 
         /// <summary>
-        /// Load Employees from file
+        /// Reads Employees from file
         /// </summary>
         /// <returns>Employee array generated from file</returns>
-        private static List<Employee> LoadEmployees()
+        private static List<Employee> Read()
         {
             List<Employee> employees = new List<Employee>();
 

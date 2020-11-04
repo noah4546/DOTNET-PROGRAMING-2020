@@ -13,6 +13,8 @@
 
 
 using System;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace Lab4A
 {
@@ -38,16 +40,87 @@ namespace Lab4A
             Rate = rate;
             Hours = hours;
             Gross = (decimal)Hours * Rate;
+
+            if (hours > 40)
+                Gross = Gross + (((decimal)Hours - 40) * Rate * (decimal)0.5);
         }
 
+        /// <summary>
+        /// Returns a string of Employee
+        /// </summary>
+        /// <returns>Employee string</returns>
         public override string ToString()
         {
             return $"{Name,-20}   {Number,-6}   {Rate,-6:$0.00}   {Hours,-5:0.00}   {Gross,9:0,0.00}";
         }
 
-        public int CompareTo(Employee compareEmployee)
+        /// <summary>
+        /// Gets the comparer for Employees
+        /// </summary>
+        /// <returns>Employee Comparer</returns>
+        public static EmployeeComparer GetComparer()
         {
-            throw new NotImplementedException(); //TODO: FIX THIS
+            return new EmployeeComparer();
+        }
+
+        /// <summary>
+        /// Compares right hand side to employee number
+        /// </summary>
+        /// <param name="rhs">Employee to compare</param>
+        /// <returns>value to indicate greater, less, or equal</returns>
+        public int CompareTo(Employee rhs)
+        {
+            return Number.CompareTo(rhs.Number);
+        }
+
+        /// <summary>
+        /// Compares right hand side to employee whichComparison
+        /// </summary>
+        /// <param name="rhs">Employee to compare</param>
+        /// <param name="whichComparison">Which property to compare with</param>
+        /// <returns>value to indicate greater, less, or equal</returns>
+        public int CompareTo(Employee rhs, EmployeeComparer.ComparisonType whichComparison)
+        {
+            switch (whichComparison)
+            {
+                case EmployeeComparer.ComparisonType.Name:
+                    return Name.CompareTo(rhs.Name);
+                case EmployeeComparer.ComparisonType.Number:
+                    return Number.CompareTo(rhs.Number);
+                case EmployeeComparer.ComparisonType.Rate:
+                    return Rate.CompareTo(rhs.Rate) * -1; //*-1 to sort descending
+                case EmployeeComparer.ComparisonType.Hours:
+                    return Hours.CompareTo(rhs.Hours) * -1; //*-1 to sort descending
+                case EmployeeComparer.ComparisonType.Gross:
+                    return Gross.CompareTo(rhs.Gross) * -1; //*-1 to sort descending
+            }
+            return 0;
+        }
+
+        // Nested class which implements IComparer
+        public class EmployeeComparer : IComparer<Employee>
+        {
+            public ComparisonType WhichComparison { get; set; }
+
+            public enum ComparisonType
+            {
+                Name,
+                Number,
+                Rate,
+                Hours,
+                Gross
+            };
+
+            /// <summary>
+            /// Compares two employees lhs and rhs depending on whichComparison
+            /// </summary>
+            /// <param name="lhs">Left hand side</param>
+            /// <param name="rhs">Right hand side</param>
+            /// <returns>value to indicate greater, less, or equal</returns>
+            public int Compare(Employee lhs, Employee rhs)
+            {
+                return lhs.CompareTo(rhs, WhichComparison);
+            }
         }
     }
 }

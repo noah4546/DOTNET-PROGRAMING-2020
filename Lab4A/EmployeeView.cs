@@ -19,6 +19,7 @@ namespace Lab4A
     class EmployeeView
     {
         public List<Employee> Employees { get; set; }
+        private Employee.EmployeeComparer employeeComparer = Employee.GetComparer();
 
         /// <summary>
         /// EmployeeView Main Constructor
@@ -54,17 +55,23 @@ namespace Lab4A
                 }
 
                 if (userSelection == 1)
-                    Employees.Sort(); //TODO: Sort Name
+                    employeeComparer.WhichComparison = Employee.EmployeeComparer.ComparisonType.Name;
                 else if (userSelection == 2)
-                    Employees.Sort(); //TODO: Sort Number
+                    employeeComparer.WhichComparison = Employee.EmployeeComparer.ComparisonType.Number;
                 else if (userSelection == 3)
-                    Employees.Sort(); //TODO: Sort Rate
+                    employeeComparer.WhichComparison = Employee.EmployeeComparer.ComparisonType.Rate;
                 else if (userSelection == 4)
-                    Employees.Sort(); //TODO: Sort Hours
+                    employeeComparer.WhichComparison = Employee.EmployeeComparer.ComparisonType.Hours;
                 else if (userSelection == 5)
-                    Employees.Sort(); //TODO: Sort Gross
+                    employeeComparer.WhichComparison = Employee.EmployeeComparer.ComparisonType.Gross;
                 else //userSelection must be 6, so exit
                     break;
+
+                DisplayHeader();
+
+                Employees.Sort(employeeComparer);
+                foreach (Employee employee in Employees)
+                    Console.WriteLine(employee);
 
                 Console.WriteLine("\n\n");
                 DisplayMenu();
@@ -86,6 +93,15 @@ namespace Lab4A
             Console.WriteLine("5. Sort by Employee Gross Pay");
             Console.WriteLine("\n6. Exit");
             Console.WriteLine("\nEnter choice:");
+        }
+
+        /// <summary>
+        /// Displays the header for the ordered tables in console
+        /// </summary>
+        public void DisplayHeader()
+        {
+            Console.WriteLine($"{"Employee",-20}   {"Number",6}   {"Rate",6}   {"Hours",5}   {"Gross Pay",9}\t\tNoah's Company");
+            Console.WriteLine("=====================  ======   ======   =====   =========\t\t--------------");
         }
     }
 }

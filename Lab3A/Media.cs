@@ -16,7 +16,6 @@
 ///          classes will also need to implement the methods of that
 ///          interface as well.
 /// </summary>
-
 public abstract class Media : ISearchable
 {
     public string Title { get; protected set; }          // Title of the media object
@@ -27,7 +26,6 @@ public abstract class Media : ISearchable
     /// </summary>
     /// <param name="title">The title of the media object</param>
     /// <param name="year">The year of publication and/or release</param>
-
     public Media(string title, int year)
     {
         Title = title;

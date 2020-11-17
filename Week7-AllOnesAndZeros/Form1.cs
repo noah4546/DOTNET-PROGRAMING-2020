@@ -75,5 +75,10 @@ namespace Week7_AllOnesAndZeros
             output = sha.ComputeHash(input);
             hashSaltTB.Text = Convert.ToBase64String(output);
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

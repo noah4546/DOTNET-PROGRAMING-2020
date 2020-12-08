@@ -150,6 +150,7 @@ namespace Week12_CarDB
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "MainFrom";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.MainFrom_Load);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);

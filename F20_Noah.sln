@@ -55,6 +55,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week11-BallEx", "Week11-Bal
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week12-CarDB", "Week12-CarDB\Week12-CarDB.csproj", "{3AF49600-1C6B-4385-A272-DFB26A0FF549}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab5A", "Lab5A\Lab5A.csproj", "{B020B495-D907-47F5-8CC0-212762E2B9A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab5B", "Lab5B\Lab5B.csproj", "{0A55322E-5420-4DAE-BEDA-A7C059DA4FAB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -165,6 +169,14 @@ Global
 		{3AF49600-1C6B-4385-A272-DFB26A0FF549}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3AF49600-1C6B-4385-A272-DFB26A0FF549}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3AF49600-1C6B-4385-A272-DFB26A0FF549}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B020B495-D907-47F5-8CC0-212762E2B9A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B020B495-D907-47F5-8CC0-212762E2B9A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B020B495-D907-47F5-8CC0-212762E2B9A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B020B495-D907-47F5-8CC0-212762E2B9A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A55322E-5420-4DAE-BEDA-A7C059DA4FAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A55322E-5420-4DAE-BEDA-A7C059DA4FAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A55322E-5420-4DAE-BEDA-A7C059DA4FAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A55322E-5420-4DAE-BEDA-A7C059DA4FAB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

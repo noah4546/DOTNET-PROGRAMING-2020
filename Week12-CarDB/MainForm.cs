@@ -98,5 +98,10 @@ namespace Week12_CarDB
 
             }
         }
+
+        private void MainFrom_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
